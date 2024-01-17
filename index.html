@@ -30,20 +30,20 @@
     // ❗ Notes:
     // 🧠 There are many ways to solve this, but practice using a for loop to iterate over the array.
     // 🧠 As you have done in the past, declare a variable before you start looping, to accumulate the result.
-    //function sumNumsFor(nums) {
+    function sumNumsFor(nums) {
       // Declare a variable to accumulate the result
-  //let total = 0;
+  let total = 0;
 
 // Use a for loop to iterate over the array
-//for (let i = 0; i < nums.length; i++) {
+for (let i = 0; i < nums.length; i++) {
   // Check if the current element is a number and not 13
- // if (typeof nums[i] === "number" && nums[i] !== 13) {
-  //  total += nums[i]; // Add the number to the total
- // } else if (nums[i] === 13) {
+ if (typeof nums[i] === "number" && nums[i] !== 13) {
+ total += nums[i]; // Add the number to the total
+  } else if (nums[i] === 13) {
   //  // If the number is 13, return the superstition string
- //   return "I'm too superstitious!";
- // }
-//}
+   return "I'm too superstitious!";
+  }
+}
 
 // If the loop completes without finding 13, return the total sum
 //return total;
@@ -56,13 +56,17 @@
     // ❗ Notes:
     // 🧠 There are many ways to solve this, but practice using a for loop to iterate over the characters of the string.
     function stripVowels(str) {
-      const letters = 0
-      for (let idx = 0; idx < nums.length; idx++) {
-        if (stripVowels = 'a' || 'e' || 'i' || 'o' || 'u')
-        return stripVowels
-      }
+      let result = '';
 
-    }
+for (let idx = 0; idx < str.length; idx++) {
+  let char = str[idx];
+  if (char !== 'a' && char !== 'e' && char !== 'i' && char !== 'o' && char !== 'u') {
+    result += char;
+  }
+}
+
+return result;
+}
 
     // 👉 CHALLENGE 3
     // 🧠 Reimplement sumNumsFor using a while loop instead of a for loop.
@@ -70,7 +74,6 @@
     // sumNumsWhile([1, 2, 3]) // should return 6
     // sumNumsWhile([1, 2, 13]) // should return "I'm too superstitious!"
     function sumNumsWhile() {
-
     }
 
     // 👉 CHALLENGE 4
@@ -91,7 +94,6 @@
     // 🧠 Work out using pen and paper how the round number and the lifePoints change after each round.
     // 🧠 As long as there are lifePoints, decrease lifePoints by round number, and increase round number by one.
     function fightMonsters() {
-
     }
 
     // 👉 CHALLENGE 5
@@ -102,7 +104,6 @@
     // ❗ Notes:
     // 🧠 Use any kind of loop you'd like and the push method to populate the array of even numbers.
     function findEvenNums() {
-
     }
 
     // 👉 CHALLENGE 6
@@ -113,7 +114,6 @@
     // 🧠 Examples of usage:
     // separateAges([31, 12, 25, 65, 84, 20]) // should return [[12, 20], [31, 25, 65, 84]]
     function separateAges() {
-
     }
 
     // 👉 CHALLENGE 7
@@ -124,7 +124,6 @@
     // 🧠 Examples of usage:
     // headAndTail([1, 2, 3]) // should return { head: 1, tail: [2, 3] }
     function headAndTail() {
-
     }
 
     // 👉 CHALLENGE 8
@@ -135,7 +134,6 @@
     // ❗ Notes:
     // 🧠 To capitalize a string you can use its toUpperCase method: "a".toUpperCase() returns "A"
     function nestedLoops() {
-
     }
 
     // 👉 CHALLENGE 9
@@ -149,7 +147,6 @@
     // 🧠 Practice using pop and slice.
     // 🧠 Note that pop modifies the original array in place and returns the "popped" element, whereas slice gives us a brand new array.
     function crazyTrimmer(arr) {
-
     }
 
     // 🧪 TESTS, do not work below this line
@@ -220,6 +217,7 @@
           .map(JSON.stringify)}) should return ${result[1]} but returns ${result[2]}`)
       })
     }
+  }
   </script>
 </body>
 
